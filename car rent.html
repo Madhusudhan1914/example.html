@@ -1,0 +1,361 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Rental App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Rent-A-Ride</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Cars</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero">
+            <div class="hero-content">
+                <h2>Find Your Perfect Ride</h2>
+                <p>Explore our wide selection of vehicles for your next adventure.</p>
+                <button id="browse-cars-btn">Browse Cars</button>
+            </div>
+        </section>
+
+        <section id="car-listings" class="hidden">
+            <h2>Available Cars</h2>
+            <div class="car-grid">
+                </div>
+        </section>
+
+        <section id="booking-form" class="hidden">
+            <h2>Book Your Car</h2>
+            <form id="booking-details">
+                <label for="car-model">Car Model:</label>
+                <input type="text" id="car-model" name="car-model" readonly><br><br>
+
+                <label for="pickup-date">Pickup Date:</label>
+                <input type="date" id="pickup-date" name="pickup-date" required><br><br>
+
+                <label for="return-date">Return Date:</label>
+                <input type="date" id="return-date" name="return-date" required><br><br>
+
+                <label for="pickup-location">Pickup Location:</label>
+                <input type="text" id="pickup-location" name="pickup-location" required><br><br>
+
+                <button type="submit">Book Now</button>
+                <button type="button" id="cancel-booking">Cancel</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Rent-A-Ride. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+/* style.css */
+body {
+    font-family: sans-serif;
+    margin: #333;
+    color: white;
+    padding: 1em 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 1em;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+main {
+    padding: 20px;
+}
+
+#hero {
+    background-image: url('car-background.jpg'); /* Replace with your image */
+    background-size: cover;
+    color: white;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#hero h2 {
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Rental App</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Car Rental</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#cars">Cars</a></li>
+                <li><a href="#booking">Book Now</a></li>
+                <li><a href="#account">My Account</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero">
+            <div class="hero-content">
+                <h2>Find Your Perfect Ride</h2>
+                <p>Explore a wide selection of cars for your next adventure.</p>
+                <div class="search-bar">
+                    <input type="text" placeholder="Enter location or car model">
+                    <button>Search</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="cars" class="car-listing">
+            <h2>Available Cars</h2>
+            <div class="car-grid">
+                </div>
+            <button id="view-all-cars">View All Cars</button>
+        </section>
+
+        <section id="booking" class="booking-section">
+            <h2>Book Your Car</h2>
+            <form id="booking-form">
+                <label for="car-select">Select a Car:</label>
+                <select id="car-select" name="car-select">
+                    <option value="">-- Select Car --</option>
+                    </select>
+
+                <label for="pickup-date">Pickup Date:</label>
+                <input type="date" id="pickup-date" name="pickup-date" required>
+
+                <label for="return-date">Return Date:</label>
+                <input type="date" id="return-date" name="return-date" required>
+
+                <button type="submit">Book Now</button>
+            </form>
+            <div id="booking-message" class="hidden"></div>
+        </section>
+
+        <section id="account" class="account-section">
+            <h2>My Bookings</h2>
+            <div id="booking-history">
+                <p>No bookings yet.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Car Rental App</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+#hero p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+#hero button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#car-listings, #booking-form {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.car-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.car-card {
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.car-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 3px;
+    margin-bottom: 10px;
+}
+
+.car-card h3 {
+    margin-top: 0;
+}
+
+.car-card button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    font-size: 0.9em;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+#booking-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+#booking-form input[type="text"],
+#booking-form input[type="date"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+#booking-form button[type="submit"],
+#booking-form button[type="button"] {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+#booking-form button[type="button"] {
+    background-color: #dc3545;
+}
+
+footer {
+    text-align: center;
+    padding: 1em 0;
+    background-color: #333;
+    color: white;
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+}
+
+.hidden {
+    display: none;
+}
+
+// script.js
+document.addEventListener('DOMContentLoaded', () => {
+    const browseCarsBtn = document.getElementById('browse-cars-btn');
+    const carListingsSection = document.getElementById('car-listings');
+    const carGrid = document.querySelector('.car-grid');
+    const bookingFormSection = document.getElementById('booking-form');
+    const bookingDetailsForm = document.getElementById('booking-details');
+    const carModelInput = document.getElementById('car-model');
+    const cancelBookingBtn = document.getElementById('cancel-booking');
+
+    // Sample car data (replace with actual API data)
+    const cars = [
+        { id: 1, model: 'Sedan', image: 'sedan.jpg', price: '$30/day' },
+        { id: 2, model: 'SUV', image: 'suv.jpg', price: '$45/day' },
+        { id: 3, model: 'Hatchback', image: 'hatchback.jpg', price: '$25/day' },
+        { id: 4, model: 'Luxury', image: 'luxury.jpg', price: '$60/day' },
+    ];
+
+    function displayCars(cars) {
+        carGrid.innerHTML = ''; // Clear previous listings
+        cars.forEach(car => {
+            const carCard = document.createElement('div');
+            carCard.classList.add('car-card');
+            carCard.innerHTML = `
+                <img src="${car.image}" alt="${car.model}">
+                <h3>${car.model}</h3>
+                <p>Price: ${car.price}</p>
+                <button class="rent-button" data-model="${car.model}">Rent Now</button>
+            `;
+            carGrid.appendChild(carCard);
+        });
+
+        // Add event listeners to the "Rent Now" buttons
+        const rentButtons = document.querySelectorAll('.rent-button');
+        rentButtons.forEach(button => {
+            button.addEventListener('click', (event) => {
+                const selectedModel = event.target.dataset.model;
+                carModelInput.value = selectedModel;
+                carListingsSection.classList.add('hidden');
+                bookingFormSection.classList.remove('hidden');
+            });
+        });
+    }
+
+    browseCarsBtn.addEventListener('click', () => {
+        carListingsSection.classList.remove('hidden');
+        hero.classList.add('hidden'); // Hide the hero section
+    });
+
+    bookingDetailsForm.addEventListener('submit', (event) => {
+        event.preventDefault();
+        // In a real application, you would send this data to a server
+        const pickupDate = document.getElementById('pickup-date').value;
+        const returnDate = document.getElementById('return-date').value;
+        const pickupLocation = document.getElementById('pickup-location').value;
+        const selectedCarModel = carModelInput.value;
+
+        alert(Booking confirmed for ${selectedCarModel} from ${pickupDate} to ${returnDate} at ${pickupLocation}! (This is a demo));
+        bookingFormSection.classList.add('hidden');
+        hero.classList.remove('hidden'); // Show the hero section again
+    });
+
+    cancelBookingBtn.addEventListener('click', () => {
+        bookingFormSection.classList.add('hidden');
+        carListingsSection.classList.remove('hidden');
+    });
+
+    // Initial display of cars
+    displayCars(cars);
+});
